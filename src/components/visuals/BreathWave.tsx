@@ -10,14 +10,14 @@ export function BreathWave({ className = "" }: { className?: string }) {
     >
       <defs>
         <linearGradient id="bw-grad" x1="0" x2="1">
-          <stop offset="0%" stopColor="oklch(0.85 0.14 195)" stopOpacity="0" />
-          <stop offset="50%" stopColor="oklch(0.85 0.14 195)" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="oklch(0.85 0.14 195)" stopOpacity="0" />
+          <stop offset="0%" stopColor="oklch(0.7 0.13 195)" stopOpacity="0" />
+          <stop offset="50%" stopColor="oklch(0.7 0.13 195)" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="oklch(0.7 0.13 195)" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="bw-grad2" x1="0" x2="1">
-          <stop offset="0%" stopColor="oklch(0.98 0 0)" stopOpacity="0" />
-          <stop offset="50%" stopColor="oklch(0.98 0 0)" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="oklch(0.98 0 0)" stopOpacity="0" />
+          <stop offset="0%" stopColor="oklch(0.14 0 0)" stopOpacity="0" />
+          <stop offset="50%" stopColor="oklch(0.14 0 0)" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="oklch(0.14 0 0)" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -42,9 +42,9 @@ export function BreathWave({ className = "" }: { className?: string }) {
       <motion.path
         d="M0,260 C200,200 320,360 540,260 C760,160 880,360 1080,260 C1240,200 1340,320 1440,260"
         fill="none"
-        stroke="oklch(0.85 0.14 195)"
+        stroke="oklch(0.7 0.13 195)"
         strokeWidth="0.8"
-        strokeOpacity="0.25"
+        strokeOpacity="0.3"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{ duration: 5, ease: "easeInOut", delay: 0.8 }}
