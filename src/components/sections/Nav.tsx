@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import oaLogo from "@/assets/oxygen-advantage-logo.png";
 
 const links = [
   { href: "#metoda", label: "Metoda" },
@@ -29,12 +30,14 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="#top" className="flex items-center gap-2 group">
+        <a href="#top" className="flex items-center gap-3 group">
           <span className="font-display text-lg font-bold tracking-tight">IP</span>
           <span className="h-4 w-px bg-border" />
-          <span className="label-mono text-foreground/80 group-hover:text-accent transition-colors">
-            OXYGEN ADVANTAGE
-          </span>
+          <img
+            src={oaLogo}
+            alt="Oxygen Advantage"
+            className="h-4 w-auto logo-invert opacity-80 group-hover:opacity-100 transition-opacity"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

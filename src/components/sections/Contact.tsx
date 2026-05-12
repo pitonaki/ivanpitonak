@@ -30,7 +30,7 @@ export function Contact() {
 
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <a
-            href="mailto:ivan@pitonak.cz"
+            href="mailto:ivan@ivanpitonak.cz"
             className="group inline-flex h-14 items-center gap-3 rounded-sm bg-foreground px-8 text-sm font-medium uppercase tracking-widest text-background transition-all hover:bg-accent"
           >
             Napsat email
@@ -42,14 +42,14 @@ export function Contact() {
           <ContactCard
             icon={Mail}
             label="Email"
-            value="ivan@pitonak.cz"
-            href="mailto:ivan@pitonak.cz"
+            value="ivan@ivanpitonak.cz"
+            href="mailto:ivan@ivanpitonak.cz"
           />
           <ContactCard
             icon={Instagram}
             label="Instagram"
-            value="@ivan.pitonak"
-            href="https://instagram.com"
+            value="@ivanpitonak_"
+            href="https://www.instagram.com/ivanpitonak_"
           />
           <ContactCard icon={MapPin} label="Lokalita" value="Praha & online" />
         </div>
