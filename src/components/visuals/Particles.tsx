@@ -26,11 +26,11 @@ export function Particles({ count = 30, className = "" }: { count?: number; clas
             left: `${d.left}%`,
             width: d.size,
             height: d.size,
-            background: d.accent ? "oklch(0.85 0.14 195)" : "oklch(1 0 0)",
-            opacity: d.accent ? 0.5 : 0.25,
+            background: d.accent ? "oklch(0.7 0.13 195)" : "oklch(0.14 0 0)",
+            opacity: d.accent ? 0.45 : 0.22,
             animationDelay: `${d.delay}s`,
             animationDuration: `${d.duration}s`,
-            boxShadow: d.accent ? "0 0 8px oklch(0.85 0.14 195 / 0.6)" : "none",
+            boxShadow: d.accent ? "0 0 8px oklch(0.7 0.13 195 / 0.5)" : "none",
           }}
         />
       ))}
