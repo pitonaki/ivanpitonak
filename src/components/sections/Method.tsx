@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wind, Gauge, Mountain, Waves } from "lucide-react";
+import { Wind, Gauge, Mountain, Waves, PlayCircle } from "lucide-react";
 import { SectionLabel } from "../visuals/SectionLabel";
 
 const pillars = [
@@ -255,6 +255,16 @@ function BoltScaleCard() {
             Body Oxygen Level Test je rychlý ukazatel funkčního dýchání. Cílem
             tréninku je dlouhodobě posunout skóre nad 40 sekund.
           </p>
+          <a
+            href="https://youtube.com/shorts/0d-90UcpRWo?feature=share"
+            target="_blank"
+            rel="noreferrer"
+            className="group mt-5 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-accent hover:text-foreground transition-colors"
+          >
+            <PlayCircle size={16} />
+            Návod jak změřit BOLT
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
         </div>
 
         <div className="lg:col-span-3">
@@ -277,9 +287,9 @@ function BoltScaleCard() {
             </motion.div>
           </div>
           <div className="mt-3 grid grid-cols-4 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-            <span>&lt; 10 s · dušnost</span>
-            <span>10–20 s · slabé</span>
-            <span>20–40 s · průměr</span>
+            <span>&lt; 10 s · critical</span>
+            <span>10–25 s · low perf</span>
+            <span>25–40 s · funkční</span>
             <span className="text-accent">40+ s · elite</span>
           </div>
         </div>
