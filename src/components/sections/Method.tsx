@@ -269,21 +269,28 @@ function BoltScaleCard() {
 
         <div className="lg:col-span-3">
           {/* scale */}
-          <div className="relative h-3 w-full overflow-hidden rounded-full bg-foreground/10">
-            <div className="absolute inset-y-0 left-0 w-1/4 bg-foreground/30" />
-            <div className="absolute inset-y-0 left-1/4 w-1/4 bg-foreground/50" />
-            <div className="absolute inset-y-0 left-2/4 w-1/4 bg-accent/60" />
-            <div className="absolute inset-y-0 left-3/4 w-1/4 bg-accent" />
+          <div className="relative pt-10 pb-2">
+            <div className="relative h-2 w-full overflow-hidden rounded-full bg-foreground/10">
+              <div className="absolute inset-y-0 left-0 w-1/4 bg-foreground/25" />
+              <div className="absolute inset-y-0 left-1/4 w-1/4 bg-foreground/45" />
+              <div className="absolute inset-y-0 left-2/4 w-1/4 bg-accent/55" />
+              <div className="absolute inset-y-0 left-3/4 w-1/4 bg-accent" />
+            </div>
             <motion.div
-              className="absolute -top-1 h-5 w-px bg-foreground"
+              className="absolute top-0 bottom-0 flex flex-col items-center"
               initial={{ left: "0%" }}
-              whileInView={{ left: "70%" }}
+              whileInView={{ left: "87.5%" }}
               viewport={{ once: true }}
               transition={{ duration: 1.6, ease: "easeOut", delay: 0.3 }}
+              style={{ transform: "translateX(-50%)" }}
             >
-              <span className="absolute -top-6 -translate-x-1/2 font-mono text-[10px] uppercase tracking-widest">
-                cíl 40 s+
-              </span>
+              <div className="flex flex-col items-center">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-accent whitespace-nowrap">
+                  cíl 40 s+
+                </span>
+                <span className="mt-1 h-2 w-2 rotate-45 bg-accent shadow-[0_0_12px_oklch(0.7_0.13_195_/_0.8)]" />
+              </div>
+              <span className="mt-1 h-4 w-px bg-accent" />
             </motion.div>
           </div>
           <div className="mt-3 grid grid-cols-4 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">

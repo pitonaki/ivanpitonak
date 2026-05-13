@@ -57,7 +57,7 @@ export function Contact() {
             value="@ivanpitonak"
             href="https://www.youtube.com/@ivanpitonak"
           />
-          <ContactCard icon={MapPin} label="Lokalita" value="Praha & online" />
+          <ContactCard icon={MapPin} label="Lokalita" value="Česko / Slovensko & online" />
         </div>
       </div>
     </section>
