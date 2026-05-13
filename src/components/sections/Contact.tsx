@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Instagram, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Instagram, Youtube, MapPin, ArrowRight } from "lucide-react";
 import { SectionLabel } from "../visuals/SectionLabel";
 import { BreathWave } from "../visuals/BreathWave";
 
@@ -38,7 +38,7 @@ export function Contact() {
           </a>
         </div>
 
-        <div className="mt-20 grid gap-px border border-border sm:grid-cols-3 bg-border">
+        <div className="mt-20 grid gap-px border border-border sm:grid-cols-2 lg:grid-cols-4 bg-border">
           <ContactCard
             icon={Mail}
             label="Email"
@@ -50,6 +50,12 @@ export function Contact() {
             label="Instagram"
             value="@ivanpitonak_"
             href="https://www.instagram.com/ivanpitonak_"
+          />
+          <ContactCard
+            icon={Youtube}
+            label="YouTube"
+            value="@ivanpitonak"
+            href="https://www.youtube.com/@ivanpitonak"
           />
           <ContactCard icon={MapPin} label="Lokalita" value="Praha & online" />
         </div>
