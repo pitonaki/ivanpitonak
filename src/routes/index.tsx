@@ -9,28 +9,6 @@ import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      {
-        title:
-          "Ivan Pitoňák — Oxygen Advantage Instruktor | Dýchej líp. Výkon výš.",
-      },
-      {
-        name: "description",
-        content:
-          "Funkční dechový trénink podle Oxygen Advantage®. Vyšší sportovní výkon, lepší spánek a odolnost vůči stresu. Konzultace, workshopy a programy.",
-      },
-      {
-        property: "og:title",
-        content: "Ivan Pitoňák — Oxygen Advantage Instruktor",
-      },
-      {
-        property: "og:description",
-        content:
-          "Funkční dechový trénink pro výkon, regeneraci a odolnost. Konzultace, workshopy, programy.",
-      },
-    ],
-  }),
   component: Index,
 });
 
