@@ -4,7 +4,11 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  HeadContent,
+  Scripts,
 } from "@tanstack/react-router";
+
+import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -64,10 +68,54 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  head: () => ({
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Ivan Pitoňák — Oxygen Advantage Instruktor | Dýchej líp. Výkon výš." },
+      {
+        name: "description",
+        content:
+          "Certifikovaný Oxygen Advantage Advanced Instructor. Funkční dechové tréninky pro sportovní výkon, regeneraci, lepší spánek a odolnost vůči stresu.",
+      },
+      { name: "author", content: "Ivan Pitoňák" },
+      { property: "og:title", content: "Ivan Pitoňák — Oxygen Advantage Instruktor" },
+      {
+        property: "og:description",
+        content: "Funkční dechový trénink pro výkon, regeneraci a odolnost.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+      },
+    ],
+  }),
+  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
+
+function RootShell({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="cs" className="dark">
+      <head>
+        <HeadContent />
+      </head>
+      <body className="bg-background text-foreground antialiased">
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
