@@ -4,11 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -68,60 +64,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ivan Pitoňák — Oxygen Advantage Instruktor | Dýchej líp. Výkon výš." },
-      {
-        name: "description",
-        content:
-          "Certifikovaný Oxygen Advantage Advanced Instructor. Funkční dechové tréninky pro sportovní výkon, regeneraci, lepší spánek a odolnost vůči stresu.",
-      },
-      { name: "author", content: "Ivan Pitoňák" },
-      { property: "og:title", content: "Ivan Pitoňák — Oxygen Advantage Instruktor | Dýchej líp. Výkon výš." },
-      {
-        property: "og:description",
-        content: "Funkční dechový trénink pro výkon, regeneraci a odolnost.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Ivan Pitoňák — Oxygen Advantage Instruktor | Dýchej líp. Výkon výš." },
-      { name: "description", content: "Webová aplikácia pre Oxygen Advantage metódu funkčného dýchania." },
-      { property: "og:description", content: "Webová aplikácia pre Oxygen Advantage metódu funkčného dýchania." },
-      { name: "twitter:description", content: "Webová aplikácia pre Oxygen Advantage metódu funkčného dýchania." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6d115161-9da3-403d-9a23-9028d28873bc/id-preview-da3ad27d--5ae96b11-771c-4398-8af7-68caf4fc8fd5.lovable.app-1778651399879.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6d115161-9da3-403d-9a23-9028d28873bc/id-preview-da3ad27d--5ae96b11-771c-4398-8af7-68caf4fc8fd5.lovable.app-1778651399879.png" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="cs" className="dark">
-      <head>
-        <HeadContent />
-      </head>
-      <body className="bg-background text-foreground antialiased">
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
