@@ -14,8 +14,8 @@ const programs = [
     icon: Users,
     name: "Workshop",
     for: "Pro skupiny do 15 osob",
-    desc: "Půldenní workshop pro firmy, sportovní týmy nebo komunity. Teorie i praxe.",
-    meta: "max 15 osob · 4 h",
+    desc: "Celodenní workshop pro firmy, sportovní týmy nebo komunity. Teorie i praxe.",
+    meta: "max 15 osob · 6 h",
   },
   {
     icon: UsersRound,

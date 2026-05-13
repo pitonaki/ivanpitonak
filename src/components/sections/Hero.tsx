@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ArrowRight, Activity } from "lucide-react";
 import { TelemetryGrid } from "../visuals/TelemetryGrid";
 import { BreathWave } from "../visuals/BreathWave";
@@ -45,11 +46,11 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.25 }}
             className="font-display mt-8 max-w-4xl text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[0.95] tracking-tighter"
           >
-            Dýchej líp.
+            Dýchej nosem.
             <br />
-            <span className="text-silver">Výkon</span>{" "}
+            <span className="text-silver">Ži</span>{" "}
             <span className="relative inline-block">
-              výš
+              naplno
               <span className="absolute -bottom-2 left-0 h-px w-full bg-accent shadow-[0_0_12px_oklch(0.7_0.13_195_/_0.7)]" />
             </span>
             .
@@ -61,9 +62,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.45 }}
             className="mt-8 max-w-xl text-base sm:text-lg text-silver leading-relaxed"
           >
-            Funkční dechový trénink podle metody Patricka McKeowna. Vědecky
-            podložené techniky pro vyšší sportovní výkon, hlubší regeneraci a
-            klidnou nervovou soustavu.
+            Funkční dechový trénink podle metody Oxygen Advantage. Vědecky
+            podložené techniky pro vyšší sportovní výkon, hlubší regeneraci,
+            klidnou nervovou soustavu a úlevu od pocitu dušnosti či zadýchávání.
           </motion.p>
 
           <motion.div
@@ -123,29 +124,68 @@ export function Hero() {
           </div>
 
           {/* HUD card overlapping bottom-left */}
-          <div className="absolute -bottom-8 -left-6 hidden w-56 rounded-sm border border-border bg-card/95 p-4 backdrop-blur-md sm:block"
-            style={{ boxShadow: "var(--shadow-card)" }}
-          >
-            <div className="flex items-center justify-between label-mono">
-              <span className="flex items-center gap-2">
-                <Activity size={12} className="text-accent" />
-                LIVE TELEMETRY
-              </span>
-              <span className="animate-pulse-dot text-accent">●</span>
-            </div>
-            <div className="mt-4 space-y-2.5">
-              <Metric label="SpO₂" value="98" unit="%" />
-              <Metric label="HR" value="54" unit="bpm" />
-              <Metric label="BOLT" value="42" unit="s" highlight />
-              <Metric label="BREATH" value="5.5" unit="/min" />
-            </div>
-          </div>
+          <LiveTelemetry />
         </motion.div>
       </div>
 
       {/* bottom fade */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
     </section>
+  );
+}
+
+type LiveValues = {
+  spo2: number;
+  hr: number;
+  bolt: number;
+  breath: number;
+};
+
+function rand(min: number, max: number, decimals = 0) {
+  const v = Math.random() * (max - min) + min;
+  const f = Math.pow(10, decimals);
+  return Math.round(v * f) / f;
+}
+
+function LiveTelemetry() {
+  const [v, setV] = useState<LiveValues>({
+    spo2: 98,
+    hr: 54,
+    bolt: 42,
+    breath: 5.5,
+  });
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setV({
+        spo2: rand(97, 99),
+        hr: rand(52, 58),
+        bolt: rand(40, 44),
+        breath: rand(5.0, 6.2, 1),
+      });
+    }, 1600);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div
+      className="absolute -bottom-8 -left-6 hidden w-56 rounded-sm border border-border bg-card/95 p-4 backdrop-blur-md sm:block"
+      style={{ boxShadow: "var(--shadow-card)" }}
+    >
+      <div className="flex items-center justify-between label-mono">
+        <span className="flex items-center gap-2">
+          <Activity size={12} className="text-accent" />
+          LIVE TELEMETRY
+        </span>
+        <span className="animate-pulse-dot text-accent">●</span>
+      </div>
+      <div className="mt-4 space-y-2.5">
+        <Metric label="SpO₂" value={v.spo2.toFixed(0)} unit="%" />
+        <Metric label="HR" value={v.hr.toFixed(0)} unit="bpm" />
+        <Metric label="BOLT" value={v.bolt.toFixed(0)} unit="s" highlight />
+        <Metric label="BREATH" value={v.breath.toFixed(1)} unit="/min" />
+      </div>
+    </div>
   );
 }
 
@@ -164,9 +204,15 @@ function Metric({
     <div className="flex items-baseline justify-between font-mono text-xs">
       <span className="text-muted-foreground">{label}</span>
       <span className="flex items-baseline gap-1">
-        <span className={`text-lg ${highlight ? "text-accent" : "text-foreground"}`}>
+        <motion.span
+          key={value}
+          initial={{ opacity: 0.4, y: -3 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35 }}
+          className={`text-lg tabular-nums ${highlight ? "text-accent" : "text-foreground"}`}
+        >
           {value}
-        </span>
+        </motion.span>
         <span className="text-muted-foreground">{unit}</span>
       </span>
     </div>
