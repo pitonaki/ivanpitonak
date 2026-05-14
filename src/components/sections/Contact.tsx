@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Instagram, Youtube, ArrowRight } from "lucide-react";
+import { Mail, Instagram, Youtube, ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionLabel } from "../visuals/SectionLabel";
 import { BreathWave } from "../visuals/BreathWave";
 
@@ -30,7 +30,7 @@ export function Contact() {
 
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <a
-            href="mailto:ivan@ivanpitonak.cz"
+            href="mailto:petra@ivanpitonak.cz"
             className="group inline-flex h-14 items-center gap-3 rounded-sm bg-foreground px-8 text-sm font-medium uppercase tracking-widest text-background transition-all hover:bg-accent"
           >
             Napsat email
@@ -90,17 +90,49 @@ function ContactCard({
   href?: string;
 }) {
   const content = (
-    <div className="group flex h-full flex-col justify-between gap-8 bg-background p-8 transition-colors hover:bg-card">
-      <Icon size={20} className="text-silver group-hover:text-accent transition-colors" />
-      <div>
-        <div className="label-mono">{label}</div>
-        <div className="mt-2 font-display text-xl font-medium tracking-tight">{value}</div>
-        {sub && <div className="mt-1 text-sm text-silver">{sub}</div>}
+    <div className="group relative h-full overflow-hidden bg-background p-8 transition-all duration-500 hover:bg-card">
+      {/* corner brackets */}
+      <span className="pointer-events-none absolute left-2 top-2 h-3 w-3 border-l border-t border-accent/0 transition-all duration-300 group-hover:border-accent group-hover:left-3 group-hover:top-3" />
+      <span className="pointer-events-none absolute right-2 top-2 h-3 w-3 border-r border-t border-accent/0 transition-all duration-300 group-hover:border-accent group-hover:right-3 group-hover:top-3" />
+      <span className="pointer-events-none absolute left-2 bottom-2 h-3 w-3 border-l border-b border-accent/0 transition-all duration-300 group-hover:border-accent group-hover:left-3 group-hover:bottom-3" />
+      <span className="pointer-events-none absolute right-2 bottom-2 h-3 w-3 border-r border-b border-accent/0 transition-all duration-300 group-hover:border-accent group-hover:right-3 group-hover:bottom-3" />
+
+      {/* scan line sweep */}
+      <span className="pointer-events-none absolute inset-x-0 top-0 h-px translate-x-[-100%] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 transition-all duration-700 group-hover:translate-x-[100%] group-hover:opacity-100" />
+
+      {/* glow */}
+      <span className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 group-hover:opacity-100 [background:radial-gradient(120%_60%_at_50%_0%,oklch(0.7_0.13_195/0.18),transparent_70%)]" />
+
+      <div className="relative flex h-full flex-col justify-between gap-8">
+        <div className="flex items-center justify-between">
+          <Icon
+            size={20}
+            className="text-silver transition-all duration-300 group-hover:text-accent group-hover:scale-110 group-hover:[filter:drop-shadow(0_0_6px_oklch(0.7_0.13_195/0.6))]"
+          />
+          <ArrowUpRight
+            size={16}
+            className="-translate-x-1 translate-y-1 text-silver opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:text-accent group-hover:opacity-100"
+          />
+        </div>
+        <div>
+          <div className="label-mono transition-colors duration-300 group-hover:text-accent">{label}</div>
+          <div className="mt-2 font-display text-xl font-medium tracking-tight">{value}</div>
+          {sub && (
+            <div className="mt-1 text-sm text-silver transition-colors duration-300 group-hover:text-foreground">
+              {sub}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
   return href ? (
-    <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel="noreferrer"
+      className="block focus:outline-none focus-visible:ring-1 focus-visible:ring-accent"
+    >
       {content}
     </a>
   ) : (
