@@ -30,7 +30,7 @@ export function Contact() {
 
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <a
-            href="mailto:ivan@ivanpitonak.cz"
+            href="mailto:petra@ivanpitonak.cz"
             className="group inline-flex h-14 items-center gap-3 rounded-sm bg-foreground px-8 text-sm font-medium uppercase tracking-widest text-background transition-all hover:bg-accent"
           >
             Napsat email
