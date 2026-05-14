@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Instagram, Youtube, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Instagram, Youtube, ArrowRight } from "lucide-react";
 import { SectionLabel } from "../visuals/SectionLabel";
 import { BreathWave } from "../visuals/BreathWave";
 
@@ -38,26 +38,34 @@ export function Contact() {
           </a>
         </div>
 
-        <div className="mt-20 grid gap-px border border-border sm:grid-cols-2 lg:grid-cols-4 bg-border">
-          <ContactCard
-            icon={Mail}
-            label="Email"
-            value="ivan@ivanpitonak.cz"
-            href="mailto:ivan@ivanpitonak.cz"
-          />
-          <ContactCard
-            icon={Instagram}
-            label="Instagram"
-            value="@ivanpitonak_"
-            href="https://www.instagram.com/ivanpitonak_"
-          />
-          <ContactCard
-            icon={Youtube}
-            label="YouTube"
-            value="@ivanpitonak"
-            href="https://www.youtube.com/@ivanpitonak"
-          />
-          <ContactCard icon={MapPin} label="Lokalita" value="Česko / Slovensko & online" />
+        <div className="mt-20">
+          <div className="label-mono mb-6">Spojte se s námi</div>
+          <div className="grid gap-px border border-border sm:grid-cols-2 lg:grid-cols-4 bg-border">
+            <ContactCard
+              icon={Mail}
+              label="Ivan Pitoňák · Instruktor"
+              value="ivan@ivanpitonak.cz"
+              href="mailto:ivan@ivanpitonak.cz"
+            />
+            <ContactCard
+              icon={Mail}
+              label="Petra Pitoňáková · Operatíva & Podpora"
+              value="petra@ivanpitonak.cz"
+              href="mailto:petra@ivanpitonak.cz"
+            />
+            <ContactCard
+              icon={Instagram}
+              label="Instagram"
+              value="@ivanpitonak_"
+              href="https://www.instagram.com/ivanpitonak_"
+            />
+            <ContactCard
+              icon={Youtube}
+              label="YouTube"
+              value="@ivanpitonak"
+              href="https://www.youtube.com/@ivanpitonak"
+            />
+          </div>
         </div>
       </div>
     </section>
