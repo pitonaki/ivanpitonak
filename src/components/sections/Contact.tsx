@@ -39,18 +39,22 @@ export function Contact() {
         </div>
 
         <div className="mt-20">
-          <div className="label-mono mb-6">Spojte se s námi</div>
+          <h3 className="font-display text-3xl sm:text-4xl font-medium tracking-tight mb-8 text-silver">
+            Spojte se s námi
+          </h3>
           <div className="grid gap-px border border-border sm:grid-cols-2 lg:grid-cols-4 bg-border">
             <ContactCard
               icon={Mail}
-              label="Ivan Pitoňák · Instruktor"
-              value="ivan@ivanpitonak.cz"
+              label="Instruktor"
+              value="Ivan Pitoňák"
+              sub="ivan@ivanpitonak.cz"
               href="mailto:ivan@ivanpitonak.cz"
             />
             <ContactCard
               icon={Mail}
-              label="Petra Pitoňáková · Operatíva & Podpora"
-              value="petra@ivanpitonak.cz"
+              label="Operatíva & Podpora"
+              value="Petra Pitoňáková"
+              sub="petra@ivanpitonak.cz"
               href="mailto:petra@ivanpitonak.cz"
             />
             <ContactCard
@@ -76,11 +80,13 @@ function ContactCard({
   icon: Icon,
   label,
   value,
+  sub,
   href,
 }: {
   icon: React.ComponentType<{ size?: number; className?: string }>;
   label: string;
   value: string;
+  sub?: string;
   href?: string;
 }) {
   const content = (
@@ -89,6 +95,7 @@ function ContactCard({
       <div>
         <div className="label-mono">{label}</div>
         <div className="mt-2 font-display text-xl font-medium tracking-tight">{value}</div>
+        {sub && <div className="mt-1 text-sm text-silver">{sub}</div>}
       </div>
     </div>
   );
