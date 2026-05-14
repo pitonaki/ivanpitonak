@@ -48,7 +48,7 @@ export function Hero() {
           >
             Dýchej nosem.
             <br />
-            <span className="text-silver">Ži</span>{" "}
+            <span className="text-silver">Žij</span>{" "}
             <span className="relative inline-block">
               naplno
               <span className="absolute -bottom-2 left-0 h-px w-full bg-accent shadow-[0_0_12px_oklch(0.7_0.13_195_/_0.7)]" />
