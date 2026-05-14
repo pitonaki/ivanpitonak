@@ -1,10 +1,28 @@
-import { motion } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { SectionLabel } from "../visuals/SectionLabel";
+
+function CountUp({ from = 0, to, prefix = "", suffix = "" }: { from?: number; to: number; prefix?: string; suffix?: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const mv = useMotionValue(from);
+  const rounded = useTransform(mv, (v) => `${prefix}${Math.round(v)}${suffix}`);
+
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(mv, to, { duration: 1.6, ease: [0.16, 1, 0.3, 1] });
+    return () => controls.stop();
+  }, [inView, mv, to]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+}
 
 const benefits = [
   {
     cat: "Sport",
-    stat: "+12%",
+    statValue: 12,
+    statPrefix: "+",
+    statSuffix: "%",
     label: "VO₂max po 6 týdnech",
     points: [
       "Vyšší vytrvalost a ekonomika dechu",
@@ -14,7 +32,9 @@ const benefits = [
   },
   {
     cat: "Spánek",
-    stat: "−65%",
+    statValue: 65,
+    statPrefix: "−",
+    statSuffix: "%",
     label: "snížení chrápání",
     points: [
       "Hlubší a kontinuální REM fáze",
@@ -24,7 +44,9 @@ const benefits = [
   },
   {
     cat: "Stres",
-    stat: "+24%",
+    statValue: 24,
+    statPrefix: "+",
+    statSuffix: "%",
     label: "růst HRV",
     points: [
       "Aktivace parasympatiku",
