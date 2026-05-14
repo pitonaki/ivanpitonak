@@ -286,7 +286,7 @@ function BoltScaleCard() {
             >
               <div className="flex flex-col items-center">
                 <span className="font-mono text-[10px] uppercase tracking-widest text-accent whitespace-nowrap">
-                  cíl 40 s+
+                  cíl 40+ s
                 </span>
                 <span className="mt-1 h-2 w-2 rotate-45 bg-accent shadow-[0_0_12px_oklch(0.7_0.13_195_/_0.8)]" />
               </div>
