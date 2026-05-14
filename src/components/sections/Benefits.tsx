@@ -91,7 +91,7 @@ export function Benefits() {
 
               <div>
                 <div className="font-display text-6xl sm:text-7xl font-semibold tracking-tighter text-foreground">
-                  {b.stat}
+                  <CountUp to={b.statValue} prefix={b.statPrefix} suffix={b.statSuffix} />
                 </div>
                 <div className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">
                   {b.label}
