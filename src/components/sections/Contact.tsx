@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Instagram, Youtube, ArrowRight } from "lucide-react";
+import { Mail, Instagram, Youtube, ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionLabel } from "../visuals/SectionLabel";
 import { BreathWave } from "../visuals/BreathWave";
 
