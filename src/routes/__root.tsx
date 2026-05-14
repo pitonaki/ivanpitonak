@@ -72,7 +72,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ivan Pitoňák — Oxygen Advantage Instruktor | Dýchej líp. Výkon výš." },
+      { title: "Ivan Pitoňák — Oxygen Advantage Instruktor" },
       {
         name: "description",
         content:
@@ -86,6 +86,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Ivan Pitoňák — Oxygen Advantage Instruktor" },
+      { name: "description", content: "Webová aplikácia pre Oxygen Advantage metódu funkčného dýchania." },
+      { property: "og:description", content: "Webová aplikácia pre Oxygen Advantage metódu funkčného dýchania." },
+      { name: "twitter:description", content: "Webová aplikácia pre Oxygen Advantage metódu funkčného dýchania." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7550bda1-191d-4fd1-a75a-f168a9481bdb/id-preview-3527ce34--5ae96b11-771c-4398-8af7-68caf4fc8fd5.lovable.app-1778747367525.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7550bda1-191d-4fd1-a75a-f168a9481bdb/id-preview-3527ce34--5ae96b11-771c-4398-8af7-68caf4fc8fd5.lovable.app-1778747367525.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
