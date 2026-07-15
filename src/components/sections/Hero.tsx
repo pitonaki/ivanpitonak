@@ -4,7 +4,7 @@ import { ArrowRight, Activity } from "lucide-react";
 import { TelemetryGrid } from "../visuals/TelemetryGrid";
 import { BreathWave } from "../visuals/BreathWave";
 import { Particles } from "../visuals/Particles";
-import ivanPhoto from "@/assets/ivan.jpg";
+import ivanPhoto from "@/assets/ivan.jpg.asset.json";
 
 export function Hero() {
   return (
@@ -101,7 +101,7 @@ export function Hero() {
             style={{ boxShadow: "var(--shadow-card)" }}
           >
             <img
-              src={ivanPhoto}
+              src={ivanPhoto.url}
               alt="Ivan Pitoňák — certifikovaný Oxygen Advantage Advanced Instructor"
               className="h-full w-full object-cover"
               loading="eager"
