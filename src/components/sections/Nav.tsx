@@ -34,7 +34,7 @@ export function Nav() {
           <img
             src={rebreathLogo.url}
             alt="Ivan Pitoňák — RE:BREATH"
-            className="h-12 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+            className="h-14 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
           />
         </a>
 
