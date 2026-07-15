@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import oaLogo from "@/assets/oxygen-advantage-logo.png";
+import rebreathLogo from "@/assets/rebreath-logo.png.asset.json";
 
 const links = [
   { href: "#metoda", label: "Metoda" },
@@ -31,12 +31,10 @@ export function Nav() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <a href="#top" className="flex items-center gap-3 group">
-          <span className="font-display text-lg font-bold tracking-tight">IP</span>
-          <span className="h-4 w-px bg-border" />
           <img
-            src={oaLogo}
-            alt="Oxygen Advantage"
-            className="h-4 w-auto logo-invert opacity-80 group-hover:opacity-100 transition-opacity"
+            src={rebreathLogo.url}
+            alt="Ivan Pitoňák — RE:BREATH"
+            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
           />
         </a>
 

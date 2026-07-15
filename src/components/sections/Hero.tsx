@@ -103,7 +103,7 @@ export function Hero() {
             <img
               src={ivanPhoto.url}
               alt="Ivan Pitoňák — certifikovaný Oxygen Advantage Advanced Instructor"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
               loading="eager"
             />
             {/* subtle gradient over photo */}
