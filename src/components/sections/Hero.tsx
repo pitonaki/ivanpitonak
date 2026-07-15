@@ -101,7 +101,7 @@ export function Hero() {
             style={{ boxShadow: "var(--shadow-card)" }}
           >
             <img
-              src={ivanPhoto}
+              src={ivanPhoto.url}
               alt="Ivan Pitoňák — certifikovaný Oxygen Advantage Advanced Instructor"
               className="h-full w-full object-cover"
               loading="eager"
