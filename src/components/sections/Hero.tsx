@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen w-full items-center overflow-hidden pt-20"
+      className="relative flex min-h-screen w-full items-center overflow-hidden pt-24"
     >
       <TelemetryGrid />
       <BreathWave />
