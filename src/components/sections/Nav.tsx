@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import rebreathLogo from "@/assets/rebreath-logo.png.asset.json";
+const rebreathLogo = { url: "/rebreath-logo.png" };
 
 const links = [
   { href: "#metoda", label: "Metoda" },

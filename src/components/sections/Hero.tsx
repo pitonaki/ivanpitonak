@@ -4,7 +4,7 @@ import { ArrowRight, Activity } from "lucide-react";
 import { TelemetryGrid } from "../visuals/TelemetryGrid";
 import { BreathWave } from "../visuals/BreathWave";
 import { Particles } from "../visuals/Particles";
-import ivanPhoto from "@/assets/ivan.jpg.asset.json";
+const ivanPhoto = { url: "/ivan.jpg" };
 
 export function Hero() {
   return (
