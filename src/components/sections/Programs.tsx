@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, User, Users, UsersRound, Target } from "lucide-react";
+import { ArrowUpRight, User, Users, UsersRound, Target, Sparkles } from "lucide-react";
 import { SectionLabel } from "../visuals/SectionLabel";
 
 const programs = [
@@ -30,6 +30,13 @@ const programs = [
     for: "Pro výkonnostní a profi sportovce",
     desc: "Individuální dechový protokol napojený na tréninkový cyklus, hypoxický trénink.",
     meta: "1:1 · průběžně",
+  },
+  {
+    icon: Sparkles,
+    name: "Děti a mládež",
+    for: "Pro jednotlivce, skupiny i kluby",
+    desc: "Hravá a interaktivní forma konzultací a workshopů pro děti. Základy zdravého nosního dýchání v pohodě a zábavně.",
+    meta: "6+ let · 45–90 min",
   },
 ];
 
