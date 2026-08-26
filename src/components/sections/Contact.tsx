@@ -10,7 +10,7 @@ export function Contact() {
       <div className="pointer-events-none absolute inset-0 bg-grid bg-grid-fade" />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <SectionLabel index="05">Kontakt</SectionLabel>
+        <SectionLabel index="06">Kontakt</SectionLabel>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
