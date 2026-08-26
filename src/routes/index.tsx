@@ -45,6 +45,7 @@ function Index() {
       <Programs />
       <Faq />
       <Contact />
+      <Partners />
       <Footer />
     </main>
   );
