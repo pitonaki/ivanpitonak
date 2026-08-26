@@ -16,12 +16,12 @@ const partners = [
 
 function LogoItem({ name, src }: { name: string; src: string }) {
   return (
-    <div className="group/logo flex h-24 w-56 shrink-0 items-center justify-center rounded-sm border border-border bg-card px-8 transition-colors duration-300 hover:border-accent">
+    <div className="group/logo flex h-36 w-72 shrink-0 items-center justify-center rounded-sm border border-border bg-card px-6 py-5 transition-colors duration-300 hover:border-accent sm:h-40 sm:w-80">
       <img
         src={src}
         alt={name}
         loading="lazy"
-        className="max-h-12 w-auto max-w-full object-contain opacity-70 grayscale transition-all duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
+        className="max-h-full w-auto max-w-full object-contain opacity-70 grayscale transition-all duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
       />
     </div>
   );
