@@ -6,6 +6,7 @@ import { Benefits } from "@/components/sections/Benefits";
 import { Programs } from "@/components/sections/Programs";
 import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
+import { Partners } from "@/components/sections/Partners";
 import { Footer } from "@/components/sections/Footer";
 
 export const Route = createFileRoute("/")({
