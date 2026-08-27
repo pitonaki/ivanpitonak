@@ -1,27 +1,36 @@
 import { SectionLabel } from "../visuals/SectionLabel";
 
 const partners = [
-  { name: "Spartan Race", src: "/partners/spartan.png" },
-  { name: "Český tenis", src: "/partners/cesky-tenis.svg" },
+  { name: "Spartan Race", src: "/partners/spartan.png", scale: "scale-125" },
+  { name: "Český tenis", src: "/partners/cesky-tenis.svg", scale: "scale-150" },
   { name: "Běhej lesy", src: "/partners/behej-lesy.svg" },
   { name: "Český atletický svaz", src: "/partners/cesky-atleticky-svaz.png" },
   { name: "Pozemní hokej Plzeň — Litice", src: "/partners/litice.jpeg" },
-  { name: "Sportelo", src: "/partners/sportelo.svg" },
+  { name: "Sportelo", src: "/partners/sportelo.svg", scale: "scale-150" },
 ];
 
 
-function LogoItem({ name, src }: { name: string; src: string }) {
+function LogoItem({
+  name,
+  src,
+  scale,
+}: {
+  name: string;
+  src: string;
+  scale?: string;
+}) {
   return (
-    <div className="group/logo flex h-36 w-72 shrink-0 items-center justify-center rounded-sm border border-border bg-card px-6 py-5 transition-colors duration-300 hover:border-accent sm:h-40 sm:w-80">
+    <div className="group/logo flex h-36 w-72 shrink-0 items-center justify-center overflow-hidden rounded-sm border border-border bg-card px-6 py-5 transition-colors duration-300 hover:border-accent sm:h-40 sm:w-80">
       <img
         src={src}
         alt={name}
         loading="lazy"
-        className="max-h-full w-auto max-w-full object-contain opacity-70 grayscale transition-all duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
+        className={`max-h-full w-auto max-w-full object-contain opacity-70 grayscale transition-all duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 ${scale ?? ""}`}
       />
     </div>
   );
 }
+
 
 export function Partners() {
   const track = [...partners, ...partners];
@@ -41,7 +50,7 @@ export function Partners() {
       <div className="marquee-mask group relative mt-12 w-full overflow-hidden">
         <div className="marquee-track flex w-max gap-6 pl-6">
           {track.map((p, i) => (
-            <LogoItem key={`${p.name}-${i}`} name={p.name} src={p.src} />
+            <LogoItem key={`${p.name}-${i}`} name={p.name} src={p.src} scale={p.scale} />
           ))}
         </div>
       </div>
