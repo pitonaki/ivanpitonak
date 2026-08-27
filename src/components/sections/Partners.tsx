@@ -1,18 +1,14 @@
 import { SectionLabel } from "../visuals/SectionLabel";
-import spartan from "@/assets/spartan.png.asset.json";
-import ceskyTenis from "@/assets/cesky-tenis.svg.asset.json";
-import ceskaAtletika from "@/assets/cesky-atleticky-svaz.png.asset.json";
-import litice from "@/assets/litice.jpeg.asset.json";
-import sportelo from "@/assets/sportelo.svg.asset.json";
 
 const partners = [
-  { name: "Spartan Race", src: spartan.url },
-  { name: "Český tenis", src: ceskyTenis.url },
+  { name: "Spartan Race", src: "/partners/spartan.png" },
+  { name: "Český tenis", src: "/partners/cesky-tenis.svg" },
   { name: "Běhej lesy", src: "/partners/behej-lesy.svg" },
-  { name: "Český atletický svaz", src: ceskaAtletika.url },
-  { name: "Pozemní hokej Plzeň — Litice", src: litice.url },
-  { name: "Sportelo", src: sportelo.url },
+  { name: "Český atletický svaz", src: "/partners/cesky-atleticky-svaz.png" },
+  { name: "Pozemní hokej Plzeň — Litice", src: "/partners/litice.jpeg" },
+  { name: "Sportelo", src: "/partners/sportelo.svg" },
 ];
+
 
 function LogoItem({ name, src }: { name: string; src: string }) {
   return (
