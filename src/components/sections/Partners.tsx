@@ -1,9 +1,9 @@
 import { SectionLabel } from "../visuals/SectionLabel";
 import spartan from "@/assets/spartan.png.asset.json";
-import ceskyTenis from "@/assets/cesky-tenis.png.asset.json";
+import ceskyTenis from "@/assets/cesky-tenis.svg.asset.json";
 import ceskaAtletika from "@/assets/cesky-atleticky-svaz.png.asset.json";
 import litice from "@/assets/litice.jpeg.asset.json";
-import sportelo from "@/assets/sportelo.png.asset.json";
+import sportelo from "@/assets/sportelo.svg.asset.json";
 
 const partners = [
   { name: "Spartan Race", src: spartan.url },
