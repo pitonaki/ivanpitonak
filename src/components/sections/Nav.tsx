@@ -7,6 +7,7 @@ const links = [
   { href: "#benefity", label: "Benefity" },
   { href: "#programy", label: "Programy" },
   { href: "#faq", label: "FAQ" },
+  { href: "#spoluprace", label: "Reference" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
