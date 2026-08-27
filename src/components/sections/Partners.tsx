@@ -2,11 +2,11 @@ import { SectionLabel } from "../visuals/SectionLabel";
 
 const partners = [
   { name: "Spartan Race", src: "/partners/spartan.png", scale: "scale-125" },
-  { name: "Český tenis", src: "/partners/cesky-tenis.svg", scale: "scale-150" },
+  { name: "Český tenis", src: "/partners/cesky-tenis.webp", scale: "scale-150" },
   { name: "Běhej lesy", src: "/partners/behej-lesy.svg" },
   { name: "Český atletický svaz", src: "/partners/cesky-atleticky-svaz.png" },
   { name: "Pozemní hokej Plzeň — Litice", src: "/partners/litice.jpeg" },
-  { name: "Sportelo", src: "/partners/sportelo.svg", scale: "scale-150" },
+  { name: "Sportelo", src: "/partners/sportelo.png", scale: "scale-150" },
 ];
 
 
