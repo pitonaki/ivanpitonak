@@ -50,7 +50,7 @@ export function Partners() {
       <div className="marquee-mask group relative mt-12 w-full overflow-hidden">
         <div className="marquee-track flex w-max gap-6 pl-6">
           {track.map((p, i) => (
-            <LogoItem key={`${p.name}-${i}`} name={p.name} src={p.src} />
+            <LogoItem key={`${p.name}-${i}`} name={p.name} src={p.src} scale={p.scale} />
           ))}
         </div>
       </div>
