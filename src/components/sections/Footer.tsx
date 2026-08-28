@@ -9,7 +9,9 @@ export function Footer() {
             Ivan Pitoňák
           </span>
           <span className="h-3 w-px bg-border" />
-          <span className="label-mono">OA Advanced Instructor</span>
+          <span className="label-mono">
+            Oxygen Advantage Advanced Instructor a zakladatel RE:BREATH metodiky funkčního přístupu k životu
+          </span>
         </div>
 
         <div className="flex items-center gap-6">

@@ -3,8 +3,8 @@ import { SectionLabel } from "../visuals/SectionLabel";
 const partners = [
   { name: "Spartan Race", src: "/partners/spartan.png", scale: "scale-125" },
   { name: "Český tenis", src: "/partners/cesky-tenis.webp", scale: "scale-150" },
-  { name: "Běhej lesy", src: "/partners/behej-lesy.svg" },
-  { name: "Český atletický svaz", src: "/partners/cesky-atleticky-svaz.png" },
+  { name: "Běhej lesy", src: "/partners/behej-lesy.svg", scale: "scale-90" },
+  { name: "Český atletický svaz", src: "/partners/cesky-atleticky-svaz.png", scale: "scale-90" },
   { name: "Pozemní hokej Plzeň — Litice", src: "/partners/litice.jpeg" },
   { name: "Sportelo", src: "/partners/sportelo.png", scale: "scale-150" },
 ];

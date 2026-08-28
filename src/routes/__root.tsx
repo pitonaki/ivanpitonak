@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Certifikovaný Oxygen Advantage Advanced Instructor. Funkční dechové tréninky pro sportovní výkon, regeneraci, lepší spánek a odolnost vůči stresu.",
+          "Certifikovaný Oxygen Advantage Advanced Instructor a zakladatel RE:BREATH metodiky funkčního přístupu k životu. Funkční dechové tréninky pro sportovní výkon, regeneraci, lepší spánek a odolnost vůči stresu.",
       },
       { name: "author", content: "Ivan Pitoňák" },
       { property: "og:title", content: "Ivan Pitoňák — Oxygen Advantage Instruktor" },
