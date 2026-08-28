@@ -62,10 +62,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.45 }}
             className="mt-8 max-w-xl text-base sm:text-lg text-silver leading-relaxed"
           >
-            Funkční dechový trénink podle metody Oxygen Advantage a metodiky
-            RE:BREATH funkčního přístupu k životu. Vědecky podložené techniky pro
-            vyšší sportovní výkon, hlubší regeneraci, klidnou nervovou soustavu a
-            úlevu od pocitu dušnosti či zadýchávání.
+            Funkční dechový trénink podle metody Oxygen Advantage a RE:BREATH
+            funkčního přístupu k životu. Vědecky podložené techniky pro vyšší
+            sportovní výkon, hlubší regeneraci, klidnou nervovou soustavu a úlevu
+            od pocitu dušnosti či zadýchávání.
           </motion.p>
 
           <motion.div
