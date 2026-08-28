@@ -102,7 +102,7 @@ export function Hero() {
           >
             <img
               src={ivanPhoto.url}
-              alt="Ivan Pitoňák — certifikovaný Oxygen Advantage Advanced Instructor"
+              alt="Ivan Pitoňák — certifikovaný Oxygen Advantage Advanced Instructor a zakladatel RE:BREATH metodiky funkčního přístupu k životu"
               className="h-full w-full object-contain"
               loading="eager"
             />
