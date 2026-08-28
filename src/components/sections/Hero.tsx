@@ -121,6 +121,15 @@ export function Hero() {
                 CZ · OA Advanced
               </span>
             </div>
+
+            {/* intro medallion copy */}
+            <div className="absolute top-4 left-4 right-4">
+              <p className="max-w-[16rem] text-xs leading-relaxed text-background/90 drop-shadow-sm">
+                Funkční dechový trénink podle metody Oxygen Advantage. Vědecky
+                podložené techniky pro vyšší sportovní výkon, hlubší regeneraci,
+                klidnou nervovou soustavu a úlevu od pocitu dušnosti či zadýchávání.
+              </p>
+            </div>
           </div>
 
           {/* HUD card overlapping bottom-left */}
